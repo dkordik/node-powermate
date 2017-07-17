@@ -31,6 +31,7 @@ function PowerMate(index) {
 
   var powerMateHIDdevice = powerMateHIDdevices[index];
 
+  this.path = powerMateHIDdevice.path;
   this._hidDevice = new HID.HID(powerMateHIDdevice.path);
   this._buttonState = 0;
   this._closed = false;
